@@ -1,0 +1,19 @@
+// 26 var-8
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введи число а");
+        double a = scanner.nextInt();
+        System.out.println("Введи число b");
+        double b = scanner.nextInt();
+        double N = 26;
+        double answer;
+        answer = ((a - N) /(2*b))+((a * a + b * b * b) /N);
+        System.out.println("Ответ: ");
+        System.out.printf("%.2f", answer);
+
+    }
+}
