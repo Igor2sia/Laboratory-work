@@ -1,0 +1,17 @@
+'''Task 1'''
+x1 = float(input('введи х1: '))
+x2 = float(input('введи х2: '))
+y1 = float(input('введи y1: '))
+y2 = float(input('введи y2: '))
+area = ((x2-x1)**2*(y2-y1)**2)**0.5
+a = abs(x2-x1)
+b = abs(y2-y1)
+per = 2*(a+b)
+print(round(area, 2))
+print(round(p, 2))
+
+'''Task 2'''
+rubble = float(input())
+zelen = 68.33
+x = zelen*rubble
+print(x)
