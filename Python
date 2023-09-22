@@ -8,7 +8,7 @@ a = abs(x2-x1)
 b = abs(y2-y1)
 per = 2*(a+b)
 print(round(area, 2))
-print(round(p, 2))
+print(round(per, 2))
 
 '''Task 2'''
 rubble = float(input('Введи рубль'))
