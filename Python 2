@@ -1,0 +1,30 @@
+'''Task 1'''
+x = int(input())
+if 200 >= x >= 100 or x == 0:
+    print('')
+else:
+    print("invalid")
+
+'''Task 2'''
+# Прайс в будни
+banana_x = 2.50
+apple_x = 1.20
+orange_x = 0.85
+grapefruit_x = 1.45
+kiwi_x = 2.70
+pinapple_x = 5.50
+grapes_x = 3.85
+# Прайс на выходных
+banana_y = 2.70
+apple_y = 1.25
+orange_y = 0.90
+grapefruit_y = 1.60
+kiwi_y = 3.00
+pinapple_y = 5.60
+grapes_y = 4.20
+
+day = input('today is a: ')
+buy = input('wanna buy: ')
+kg = int(input('how many kg?: '))
+
+if day == 
