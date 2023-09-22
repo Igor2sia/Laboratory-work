@@ -11,7 +11,15 @@ print(round(area, 2))
 print(round(p, 2))
 
 '''Task 2'''
-rubble = float(input())
+rubble = float(input('Введи рубль'))
 zelen = 68.33
 x = zelen*rubble
 print(x)
+
+'''Task 3'''
+x = float(input('Введите метраж'))
+fullprice = x * 7.61 #прайс без скидки
+sale = x * 0.18
+finalprice = fullprice - sale
+print('Финальная цена: ', finalprice, '$')
+print('Скидка', sale, '$')
