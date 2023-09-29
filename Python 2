@@ -6,9 +6,10 @@ else:
     print("invalid")
 
 
+
 '''Task 2'''
-day = input('today is a: ').lower
-buy = input('wanna buy: ').lower
+day = input('today is a: ').lower()
+buy = input('wanna buy: ').lower()
 kg = int(input('how many kg?: '))
 
 if kg > 0:
@@ -59,5 +60,7 @@ if kg > 0:
             print('%.2f', price)
 else:
     print(kg < 0)
+
+    
 
     
