@@ -5,26 +5,59 @@ if 200 >= x >= 100 or x == 0:
 else:
     print("invalid")
 
-'''Task 2'''
-# Прайс в будни
-banana_x = 2.50
-apple_x = 1.20
-orange_x = 0.85
-grapefruit_x = 1.45
-kiwi_x = 2.70
-pinapple_x = 5.50
-grapes_x = 3.85
-# Прайс на выходных
-banana_y = 2.70
-apple_y = 1.25
-orange_y = 0.90
-grapefruit_y = 1.60
-kiwi_y = 3.00
-pinapple_y = 5.60
-grapes_y = 4.20
 
-day = input('today is a: ')
-buy = input('wanna buy: ')
+'''Task 2'''
+day = input('today is a: ').lower
+buy = input('wanna buy: ').lower
 kg = int(input('how many kg?: '))
 
-if day == 
+if kg > 0:
+    if day == 'monday' or 'tuesday' or 'wednesday' or 'thursday' or 'friday':
+        if buy == 'banana':
+            price = 2.50 * kg
+            print('%.2f', price)
+        elif buy == 'apple':
+            price = 1.20 * kg
+            print(price)
+        elif buy == 'orange':
+            price = 0.85 * kg
+            print('%.2f', price)
+        elif buy == 'grapefruit':
+            price = 1.45 * kg
+            print('%.2f', price)
+        elif buy == 'kiwi':
+            price = 1.20 * kg
+            print('%.2f', price)
+        elif buy == 'pineapple':
+            price = 1.20 * kg
+            print('%.2f', price)
+        elif buy == 'grapes':
+            price = 1.20 * kg
+            print('%.2f', price)
+    
+    elif day == 'saturday' or 'sunday':
+        if buy == 'banana':
+            price = 2.70 * kg
+            print('%.2f', price)
+        elif buy == 'apple':
+            price = 1.25 * kg
+            print('%.2f', price)
+        elif buy == 'orange':
+            price = 0.90 * kg
+            print('%.2f', price)
+        elif buy == 'grapefruit':
+            price = 1.60 * kg
+            print('%.2f', price)
+        elif buy == 'kiwi':
+            price = 3.00 * kg
+            print('%.2f', price)
+        elif buy == 'pineapple':
+            price = 5.60 * kg
+            print('%.2f', price)
+        elif buy == 'grapes':
+            price = 4.20 * kg
+            print('%.2f', price)
+else:
+    print(kg < 0)
+
+    
