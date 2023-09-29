@@ -1,7 +1,7 @@
 '''Task 1'''
 x = int(input())
 if 200 >= x >= 100 or x == 0:
-    print('')
+    print('Нет вывода')
 else:
     print("invalid")
 
