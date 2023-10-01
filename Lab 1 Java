@@ -17,3 +17,18 @@ public class Main {
 
     }
 }
+// 26 var-8
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String text = scanner.nextLine();
+        int position = scanner.nextInt();
+        char  = scanner.nextLine().charAt(0);
+        text = text.substring(0, position) + ch + str.substring(position + 1);
+        System.out.println(text.toUpperCase());
+    }
+}
