@@ -32,3 +32,19 @@ public class Main {
         System.out.println(text.toUpperCase());
     }
 }
+
+import java.util.Scanner;
+public class TicketClerk {
+    public static void main(String[] args) {
+        N = 26;
+        double cost = 123.45 * N;
+        double discount =0.95;
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        double rezultat = cost * n;
+        rezultat = rezultat * discount;
+        System.out.println(rezultat);
+        System.out.printf("%.2f", rezultat);
+        scanner.close();
+        }
+}
