@@ -62,15 +62,17 @@ else:
     print('kg < 0')
 
 'Task 3'
-pokaz = input('тип показа').lower()
-r = input('введите кол во рядов: ')
-c = input('введите кол во мест в ряде: ')
+pokaz = input('тип показа ').lower()
+r = int(input('введите кол во рядов: '))
+c = int(input('введите кол во мест в ряде: '))
 if pokaz == 'premiere':
     cost = r * c * 12
     print('%.2f' % cost)
 elif pokaz == 'normal':
     cost = r * c * 7.50
+    print('%.2f' % cost)
 elif pokaz == 'discount':
     cost = r * c * 5
+    print('%.2f' % cost)
 else:
     print('типы показов: Premiere, Normal или Discount')
