@@ -1,0 +1,47 @@
+'Task 1'
+number = float(input())
+while True:
+    if (-300 <= number <= 300) or (1000 <= number <= 1600):
+        print("The number is: " + str(number))
+        break
+    else:
+        print("Invalid number!")
+        number = int(input())
+
+'Task 2'
+n = int(input())
+while n > 0:
+    list1 = []
+    for c in range(n):
+        list1.append(int(input()))
+    print(max(list1))
+    break
+
+'Task 3'
+n = int(input())
+while n > 0:
+    list1 = []
+    for c in range(n):
+        list1.append(int(input()))
+    print(min(list1))
+    break
+
+'Task 4'
+x = int(input('введите x: '))
+y = int(input('введите y: '))
+if 1 <= (x and y) <= 1000:
+    size = x * y
+    while size > 0:
+        ber = input().lower()
+        if ber == 'stop':
+            print(str(size) + ' pieces are left')
+            break
+        size = size - int(ber)
+        if size == 0:
+            print('No more cake left!')
+            break
+        elif size < 0:
+            print('You need ' + str(abs(size)) + ' pieces more')
+            break
+else:
+    print('Кол-во кусочков должно быть больше 0 и меньше 1000000')
