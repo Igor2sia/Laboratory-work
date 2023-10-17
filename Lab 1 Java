@@ -22,8 +22,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Input text");
         String text = scanner.nextLine();
+        System.out.println("Position(index start with 0)");
         int position = scanner.nextInt();
+        while (position < 0) {
+            System.out.println("number < 0");
+            position = scanner.nextInt();
+        }
+        System.out.println("Input symbol");
         char ch = scanner.next().charAt(0);
         text = text.substring(0, position) + ch + text.substring(position + 1);
         System.out.println(text.toUpperCase());
@@ -40,10 +47,10 @@ public class Main {
         double discount =0.95;
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        double rezultat = cost * n;
-        rezultat = rezultat * discount;
-        System.out.println(rezultat);
-        System.out.printf("%.2f", rezultat);
+        double rezult = cost * n;
+        rezult = rezult * discount;
+        System.out.println(rezult);
+        System.out.printf("%.2f", rezult);
         }
 }
 
