@@ -1,0 +1,63 @@
+Task 1
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int n = 26;
+        Scanner scanner = new Scanner(System.in);
+        int number = Integer.parseInt(scanner.nextLine());
+        int s = number + n;
+        if (s % 2 == 0){
+            System.out.println("ever");
+        }else {
+            System.out.println("odd");
+        }
+    }
+}
+
+
+Task 2
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String day = scanner.next().toLowerCase();
+        String information = switch (day){
+            case "monday", "tuesday", "wednesday", "thursday", "friday", "понедельник", "вторник", "среда", "четверг", "пятница" -> "workday";
+            case "saturday", "sunday", "суббота", "воскресенье" -> "holiday";
+            default -> "invalid weekday";
+        };
+        System.out.println(information);
+    }
+}
+
+Task 3
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int hours = 0;
+        Scanner scanner = new Scanner(System.in);
+        String start = scanner.next();
+        String end = scanner.next();
+        int hoursstart = Integer.parseInt(start.substring(0, 2));
+        int hoursend = Integer.parseInt(end.substring(0, 2));
+        int minutestart = Integer.parseInt(start.substring(3, 5));
+        int minuteend = Integer.parseInt(end.substring(3, 5));
+
+        if (hoursstart < hoursend){
+            int resulthour = hoursend - hoursstart;
+        }
+        if (minutestart < minuteend){
+            int resultminute = minuteend - minutestart;
+        }
+        if (hoursstart > hoursend){
+            hours = 24 - hoursstart + hoursend;
+        }
+        
+        System.out.println(hours);
+    }
+}
