@@ -39,25 +39,66 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Введите время начала и конца поездки в формате HH:MM (24-часовой формат времени)");
         int hours = 0;
+        int minute = 0;
         Scanner scanner = new Scanner(System.in);
-        String start = scanner.next();
-        String end = scanner.next();
+        String start = scanner.nextLine();
+        String end = scanner.nextLine();
         int hoursstart = Integer.parseInt(start.substring(0, 2));
         int hoursend = Integer.parseInt(end.substring(0, 2));
         int minutestart = Integer.parseInt(start.substring(3, 5));
         int minuteend = Integer.parseInt(end.substring(3, 5));
 
-        if (hoursstart < hoursend){
-            int resulthour = hoursend - hoursstart;
+        if (minutestart > 59) {
+            System.out.println("max min = 59!");
+            return;
         }
-        if (minutestart < minuteend){
-            int resultminute = minuteend - minutestart;
+        if (minuteend > 59) {
+            System.out.println("max min = 59!");
+            return;
         }
-        if (hoursstart > hoursend){
-            hours = 24 - hoursstart + hoursend;
+        if (hoursstart > 24) {
+            System.out.println("max hour = 24!");
+            return;
+        }
+        if (hoursend > 24) {
+            System.out.println("max hour = 24!");
+            return;
         }
         
-        System.out.println(hours);
+        if (minutestart < minuteend) {
+            minute = minuteend - minutestart;
+            if (hoursstart < hoursend) {
+                hours = hoursend - hoursstart;
+
+            }
+            if (hoursstart > hoursend) {
+                hours = 24 - hoursstart + hoursend;
+            }
+        }
+        if (minutestart > minuteend) {
+            minute = 60 - minutestart + minuteend;
+            if (hoursstart < hoursend) {
+                hours = hoursend - hoursstart - 1;
+            }
+            if (hoursstart > hoursend) {
+                hours = 23 - hoursstart + hoursend;
+            }
+        }
+
+        if (hours < 10 && minute < 10) {
+            System.out.printf("0%s:0%s", hours, minute);
+        }
+        if (hours > 10 && minute > 10) {
+            System.out.printf("%s:%s", hours, minute);
+        }
+        if (hours < 10 && minute > 10) {
+            System.out.printf("0%s:%s", hours, minute);
+        }
+        if (hours > 10 && minute < 10) {
+            System.out.printf("%s:0%s", hours, minute);
+        }
     }
 }
+
