@@ -24,14 +24,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String day = scanner.next().toLowerCase();
-        String information = switch (day){
-            case "monday", "tuesday", "wednesday", "thursday", "friday", "понедельник", "вторник", "среда", "четверг", "пятница" -> "workday";
-            case "saturday", "sunday", "суббота", "воскресенье" -> "holiday";
+        String information = switch (day) {
+            case "monday", "tuesday", "wednesday", "thursday", "friday" -> "workday";
+            case "понедельник", "вторник", "среда", "четверг", "пятница" -> "рабочие дни";
+            case "saturday", "sunday" -> "holiday";
+            case "суббота", "воскресенье" -> "выходные";
             default -> "invalid weekday";
         };
         System.out.println(information);
     }
 }
+
 
 Task 3
 
