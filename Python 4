@@ -27,3 +27,21 @@ while True:
             break
         if copilka == 'end':
             break
+
+№2
+def equal_pairs():
+    n = int(input())
+    values_list = list()
+    for i in range(n * 2):
+        values_list.append(int(input()))
+    sums_list = list()
+    for j in range(0, len(values_list), 2):
+        sums_list.append(values_list[j] + values_list[j + 1])
+
+    if len(set(sums_list)) == 1:
+        print(f'yes, value={sums_list[0]}')
+    else:
+        print(f'no, maxdiff={max(sums_list) - min(sums_list)}')
+
+
+equal_pairs()
