@@ -10,6 +10,7 @@ for i in range(1, n+1, 3):
 
 Вложенные циклы
 №1
+money = 0
 while True:
     flag = False
     country = input()
@@ -19,8 +20,7 @@ while True:
     if summ < 0:
         print('Summ < 0')
         break
-    money = 0
-    while summ > 0:
+    while money < summ:
         copilka = input().lower()
         if copilka == 'end':
             flag = True
@@ -29,11 +29,13 @@ while True:
             print('Число < 0')
             continue
         money = int(copilka) + money
-        if money >= summ:
-            print(f'Going to {country}!')
-            break
+    if money >= summ:
+        print(f'Going to {country}!')
+        money -= summ
     if flag is True:
         break
+
+
 
 №2
 def equal_pairs():
