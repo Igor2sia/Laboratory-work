@@ -12,21 +12,23 @@ for i in range(1, n+1, 3):
 №1
 while True:
     country = input()
-    countrystop = country.lower()
-    if (countrystop) == 'end':
+    if country.lower() == 'end':
         break
     summ = int(input())
+    if summ < 0:
+        print('Summ < 0')
+        break
     money = 0
     while summ > 0:
         copilka = input().lower()
-        if copilka == 'end':
-            break
+        if int(copilka) < 0:
+            print('Число < 0')
+            continue
         money = int(copilka) + money
-        if money > summ:
+        if money >= summ:
             print(f'Going to {country}!')
             break
-        if copilka == 'end':
-            break
+
 
 №2
 def equal_pairs():
