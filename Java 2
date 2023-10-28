@@ -110,3 +110,60 @@ public class Main {
         }
     }
 }
+
+Task 4
+
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+        boolean flag = false;
+        int n = 100;
+        double cost = 0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите название фрукта");
+        String fruit = scanner.next().toLowerCase();
+        if (fruit.equals("apple plum banana grapes orange kiwi mango")){
+            System.out.println("invalid fruit");
+            return;
+        }
+        System.out.println("Введите день недели");
+        String d = scanner.next().toLowerCase();
+        String info = switch (d) {
+            case "wednesday", "thursday", "friday", "saturday", "sunday", "среда", "четверг", "пятница", "суббота", "воскресенье" -> "normal";
+            case "понедельник", "вторник", "monday", "tuesday" -> "trigger";
+            default -> "stop";
+        };
+        if (info.equals("stop")){
+            System.out.println("invalid weekday");
+            return;
+        }
+
+        System.out.println("Введите кг");
+        double kg = scanner.nextDouble();
+        if (kg < 0){
+            System.out.println("kg invalid");
+            return;
+        }
+
+        switch (fruit) {
+            case "apple" -> cost = kg * 9.99 * n;
+            case "plum" -> cost = kg * 10.98 * n;
+            case "banana" -> cost = kg * 11.49 * n;
+            case "grapes" -> cost = kg * 15.99 * n;
+            case "orange" -> cost = kg * 17.99 * n;
+            case "kiwi" -> cost = kg * 37.99 * n;
+            case "mango" -> cost = kg * 39.99 * n;
+        }
+
+
+        if (info.equals("trigger")) {
+            cost = (cost * 0.87);
+        }
+        System.out.printf("%.2f",cost);
+
+    }
+
+
+}
