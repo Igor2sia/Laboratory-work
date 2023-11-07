@@ -71,9 +71,9 @@ public class Main {
             return;
         }
 
-        if (minutestart < minuteend) {
+        if (minutestart <= minuteend) {
             minute = minuteend - minutestart;
-            if (hoursstart < hoursend) {
+            if (hoursstart <= hoursend) {
                 hours = hoursend - hoursstart;
 
             }
@@ -83,7 +83,7 @@ public class Main {
         }
         if (minutestart > minuteend) {
             minute = 60 - minutestart + minuteend;
-            if (hoursstart < hoursend) {
+            if (hoursstart <= hoursend) {
                 hours = hoursend - hoursstart - 1;
             }
             if (hoursstart > hoursend) {
