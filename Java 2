@@ -113,17 +113,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        boolean stop;
-        int n = 26;
+        String stop;
+        int n = 100;
         double cost = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите название фрукта");
         String fruit = scanner.next().toLowerCase();
         switch (fruit) {
-            case "apple", "plum", "banana", "grapes", "orange", "kiwi", "mango" -> stop = true;
-            default -> stop = false;
+            case "banana", "grapes", "orange", "kiwi", "mango" -> stop = "true";
+            case "apple", "plum" -> stop = "trigger";
+            default -> stop = "false";
         }
-        if (!stop){
+        if (stop.equals("false")){
             System.out.println("invalid fruit");
             return;
         }
@@ -159,10 +160,11 @@ public class Main {
         }
 
 
-        if (info.equals("trigger")) {
+        if (info.equals("trigger") && stop.equals("trigger")) {
             cost = (cost * 0.87);
         }
-        System.out.printf("%.2f", cost);
+        cost = Math.ceil(cost * 100)/100;
+        System.out.println(cost);
 
     }
 
