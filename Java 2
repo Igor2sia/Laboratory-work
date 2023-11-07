@@ -48,12 +48,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String start = scanner.nextLine();
         String end = scanner.nextLine();
-        int s = "-".indexOf(start);
-        int e = "-".indexOf(end);
-        if ((s == -1) || (e == -1)){
-            System.out.println("Время не может быть отрицательным");
-            return;
-        }
+
         int hoursstart = Integer.parseInt(start.substring(0, 2));
         int hoursend = Integer.parseInt(end.substring(0, 2));
         int minutestart = Integer.parseInt(start.substring(3, 5));
@@ -110,6 +105,7 @@ public class Main {
         }
     }
 }
+
 
 Task 4
 
