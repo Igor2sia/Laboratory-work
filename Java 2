@@ -115,34 +115,39 @@ Task 4
 
 import java.util.Scanner;
 
-
 public class Main {
     public static void main(String[] args) {
-        boolean flag = false;
-        int n = 100;
+        boolean stop;
+        int n = 26;
         double cost = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите название фрукта");
         String fruit = scanner.next().toLowerCase();
-        if (fruit.equals("apple plum banana grapes orange kiwi mango")){
+        switch (fruit) {
+            case "apple", "plum", "banana", "grapes", "orange", "kiwi", "mango" -> stop = true;
+            default -> stop = false;
+        }
+        if (!stop){
             System.out.println("invalid fruit");
             return;
         }
+
         System.out.println("Введите день недели");
         String d = scanner.next().toLowerCase();
         String info = switch (d) {
-            case "wednesday", "thursday", "friday", "saturday", "sunday", "среда", "четверг", "пятница", "суббота", "воскресенье" -> "normal";
+            case "wednesday", "thursday", "friday", "saturday", "sunday", "среда", "четверг", "пятница", "суббота", "воскресенье" ->
+                    "normal";
             case "понедельник", "вторник", "monday", "tuesday" -> "trigger";
             default -> "stop";
         };
-        if (info.equals("stop")){
+        if (info.equals("stop")) {
             System.out.println("invalid weekday");
             return;
         }
 
         System.out.println("Введите кг");
         double kg = scanner.nextDouble();
-        if (kg < 0){
+        if (kg < 0) {
             System.out.println("kg invalid");
             return;
         }
@@ -161,7 +166,7 @@ public class Main {
         if (info.equals("trigger")) {
             cost = (cost * 0.87);
         }
-        System.out.printf("%.2f",cost);
+        System.out.printf("%.2f", cost);
 
     }
 
