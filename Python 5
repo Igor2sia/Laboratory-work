@@ -1,0 +1,6 @@
+1
+
+a = input().split()
+K = [int(x) for x in a]
+K = [i*-1 for i in K]
+print(K)
