@@ -1,3 +1,6 @@
+n = 26
+var = 5
+
 demo 1
 
 import java.util.Scanner;
