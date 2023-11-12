@@ -1,1 +1,40 @@
+demo 1
 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int n = 26;
+        int sum = 0;
+        Scanner scanner = new Scanner(System.in);
+        int enter = 0;
+        do {
+            sum += enter;
+            enter = scanner.nextInt();
+        } while (enter > n);
+    }
+}
+
+demo 2
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int limit = scanner.nextInt();
+        int count = 0;
+        int power = 1;
+        while (limit >= power) {
+            power *= 2;
+            count += 1;
+            if (limit <= power) {
+                power /= 2;
+                count -= 1;
+                break;
+            }
+        }
+        System.out.println(power);
+        System.out.println(count);
+    }
+}
