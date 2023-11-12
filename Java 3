@@ -41,3 +41,32 @@ public class Main {
         System.out.println(count);
     }
 }
+
+Task 1
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = 100;
+        int number = scanner.nextInt();
+        while (true) {
+            if (-5 * n < number) {
+                if (number < n) {
+                    System.out.printf("Correct_number_%s", number);
+                    break;
+                } else {
+                    System.out.println("Not_yet");
+                    number = scanner.nextInt();
+                }
+            } else {
+                System.out.println("Not_yet");
+                number = scanner.nextInt();
+            }
+        }
+    }
+}
+
+Task 2
+
