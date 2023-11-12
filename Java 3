@@ -78,7 +78,7 @@ public class Main {
         int max = 0;
         int n = scanner.nextInt();
         if (n < 0){
-            System.out.println("n < 0");
+            System.out.println("undefined");
             return;
         }
         while (n > 0){
