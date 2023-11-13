@@ -1,0 +1,23 @@
+Demo 1
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int start = Integer.parseInt(scanner.next());
+        int finish = Integer.parseInt(scanner.next());
+        for (int i = start; i <= finish; i++) {
+            if (i % 3 != 0) continue;
+            if (i == 26) continue;
+            sum += i;
+
+        }
+        System.out.println(sum);
+    }
+}
+
+Demo 2
+
+
