@@ -77,19 +77,20 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int max = 0;
         int n = Integer.parseInt(scanner.nextLine());
-        if (n <= 0){
-            System.out.println("undefined");
-            return;
-        }
-        while (n > 0){
+
+
+        while (n > 0) {
             n -= 1;
             int x = Integer.parseInt(scanner.nextLine());
-            if (x % 3 == 0){
-                if (x > max){
+            if (x % 3 == 0) {
+                if (x > max) {
                     max = x;
                 }
             }
         }
-        System.out.println(max);
+        if (n < 0) {
+            System.out.println("undefined");
+        }
+        else System.out.println(max);
     }
 }
