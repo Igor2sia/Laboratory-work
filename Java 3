@@ -49,8 +49,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = 100;
-        int number = scanner.nextInt();
+        int n = 26;
+        int number = Integer.parseInt(scanner.nextLine());
         while (true) {
             if (-5 * n < number) {
                 if (number < n) {
@@ -58,11 +58,11 @@ public class Main {
                     break;
                 } else {
                     System.out.println("Not_yet");
-                    number = scanner.nextInt();
+                    number = Integer.parseInt(scanner.nextLine());
                 }
             } else {
                 System.out.println("Not_yet");
-                number = scanner.nextInt();
+                number = Integer.parseInt(scanner.nextLine());
             }
         }
     }
