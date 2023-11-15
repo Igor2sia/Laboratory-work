@@ -20,4 +20,27 @@ public class Main {
 
 Demo 2
 
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = 26;
+        int start = Integer.parseInt(scanner.next());
+        int finish = Integer.parseInt(scanner.next());
+        int sum = 0;
+        for (int i = start; i <= finish; i++) {
+            int factorial = i;
+            for (int j = factorial - 1; j > 0; --j) {
+                factorial *= j;
+            }
+            if (n == i){
+                System.out.println(factorial);
+                continue;
+            } 
+            
+            sum += factorial;
+        }
+        System.out.println(sum);
+    }
+}
