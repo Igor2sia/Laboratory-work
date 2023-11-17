@@ -4,3 +4,50 @@ a = input().split()
 K = [int(x) for x in a]
 K = [i*-1 for i in K]
 print(K)
+
+
+4
+card = input('Введите карты').split()
+first = card[1:len(card)//2]
+second = card[len(card)//2:-1]
+n = int(input('Введите тосовоки '))
+if n < 0 or len(card)%2 != 0:
+    print("error!")
+    return
+finish = []
+for j in range(n):
+    finish.append(card[0])
+    for i in range(len(card)//2-1):
+        finish.append(second[i])
+        finish.append(first[i])
+    finish.append(card[-1])
+    card = ready
+    ready = []
+    first = card[1:len(card) // 2]
+    second = card[len(card) // 2:-1]
+print(card)
+
+3
+
+numberz = input('Введите числа через пробел ').split()
+n = int(input('Введите кол-во чисел, которые нужно удалить '))
+if n < 0:
+    print("error")
+    return
+ready = []
+numberzmin = sorted(numberz,key=int)[:n]
+for i in numberzmin:
+    numberz.remove(i)
+print(", ".join(numberz))
+
+2
+
+factor = int(input('коэффицент '))
+count = int(input('кол-во чисел '))
+list = list()
+
+for i in range(1, count * factor + 1):
+    if i % factor == 0:
+        list.append(i)
+
+print(list)
