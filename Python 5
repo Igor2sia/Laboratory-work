@@ -7,25 +7,25 @@ print(K)
 
 
 4
-card = input('Введите карты').split()
-first = card[1:len(card)//2]
-second = card[len(card)//2:-1]
+cards = input('Введите карты ').split()
+first = cards[1:len(cards)//2]
+second = cards[len(cards)//2:-1]
 n = int(input('Введите тосовоки '))
-if n < 0 or len(card)%2 != 0:
+if n < 0 or len(cards)%2 != 0:
     print("error!")
-    return
+    exit()
 finish = []
 for j in range(n):
-    finish.append(card[0])
-    for i in range(len(card)//2-1):
+    finish.append(cards[0])
+    for i in range(len(cards)//2-1):
         finish.append(second[i])
         finish.append(first[i])
-    finish.append(card[-1])
-    card = ready
-    ready = []
-    first = card[1:len(card) // 2]
-    second = card[len(card) // 2:-1]
-print(card)
+    finish.append(cards[-1])
+    cards = finish
+    finish = []
+    first = cards[1:len(cards) // 2]
+    second = cards[len(cards) // 2:-1]
+print(cards)
 
 3
 
