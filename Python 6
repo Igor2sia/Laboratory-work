@@ -1,0 +1,12 @@
+1
+
+A = input().split(',')
+B = input().split(',')
+C = []
+for i in A:
+    if i.find(str(B)):
+        C.append(i)
+print(C)
+
+2
+
