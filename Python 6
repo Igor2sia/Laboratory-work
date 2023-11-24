@@ -48,7 +48,7 @@ for i in a:
         even.append(i)
     else:
         odd.append(i)
-print(f'Positive: {positive} \n'
-      f'Negative: {negative} \n'
-      f'Even: {even} \n'
-      f'Odd: {odd}')
+print("Positive: " + ", ".join(map(str, positive)))
+print("Negative: " + ", ".join(map(str, negative)))
+print("Even: " + ", ".join(map(str, even)))
+print("Odd: " + ", ".join(map(str, odd)))
