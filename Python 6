@@ -52,3 +52,12 @@ print("Positive: " + ", ".join(map(str, positive)))
 print("Negative: " + ", ".join(map(str, negative)))
 print("Even: " + ", ".join(map(str, even)))
 print("Odd: " + ", ".join(map(str, odd)))
+
+5
+
+nums = list(map(int, input().split()))
+max_nums = max(nums)
+if max_nums % 10:
+    max_nums = (max_nums // 10 + 1) * 10
+for i in range(10, max_nums + 1, 10):
+    print(f"Group of {i}'s: {[j for j in nums if (i - 10) < j <= i]}")
