@@ -33,9 +33,12 @@ Demo 2
 public class Main {
     public static void main(String[] args) {
         sum(5, 10);
+        sum(5.0,10);
+        sum(5.0,5.0);
     }
-    static float sum(float a, float b){
+    static double sum(double a, double b){
         return a + b;
     }
-
+    static int sum(int a, int b){
+        return a + b;
 }
