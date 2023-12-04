@@ -42,3 +42,33 @@ public class Main {
     static int sum(int a, int b){
         return a + b;
 }
+
+
+Demo 3
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class Main {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        String[] str = {" ", ",", "!", "."};
+        String text = scanner.nextLine();
+        String text1 = text.replaceAll(Arrays.toString(str), "");
+        System.out.printf("%s, %s palindrome", text, ((isPalindrome(text1.toLowerCase())) ? "is" : "is NOT"));
+    }
+
+
+    static boolean isPalindrome(String msg) {
+        if (msg.length() == 0 || msg.length() == 1) return true;
+        else {
+            if (msg.charAt(0) != msg.charAt(msg.length() - 1)) {
+                return false;
+            } else {
+                return isPalindrome(msg.substring(1, msg.length() - 1));
+            }
+        }
+    }
+}
