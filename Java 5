@@ -56,8 +56,7 @@ public class Main {
     public static void main(String[] args) {
         String[] str = {" ", ",", "!", "."};
         String text = scanner.nextLine();
-        String text1 = text.replaceAll(Arrays.toString(str), "");
-        System.out.printf("%s, %s palindrome", text, ((isPalindrome(text1.toLowerCase())) ? "is" : "is NOT"));
+        System.out.printf("%s, %s palindrome", text, ((isPalindrome(text.replaceAll(Arrays.toString(str), "").toLowerCase())) ? "is" : "is NOT"));
     }
 
 
