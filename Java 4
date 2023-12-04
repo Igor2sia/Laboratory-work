@@ -46,3 +46,47 @@ public class Main {
         System.out.println(sum);
     }
 }
+
+Задача 2
+
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        float cost = 0;
+        circle:
+        while (true) {
+            String percent = scanner.next();
+            if (!(percent.contains("%"))) {
+                System.out.println("Введите процент");
+                continue;
+            }
+            float percentfl = Float.parseFloat(percent.replace("%", "")) / 100 + 1;
+            System.out.println(percentfl);
+            cost = scanner.nextInt();
+            while (cost >= 0) {
+                String pay = scanner.next();
+                if (pay.equals("stop")) {
+                    System.out.printf("Debt amount %s", cost);
+                    break circle;
+                } else if (pay.contains("%")) {
+                    continue;
+                }
+                int payint = Integer.parseInt(pay);
+                cost = Math.round((cost - payint) * percentfl);
+                if (cost > 0)
+                    System.out.println(cost);
+            }
+            if (cost <= 0) {
+                System.out.println("Home! Sweet Home");
+                if (cost < 0){
+                    System.out.printf("На ремонт %s", Math.abs(cost));
+                }
+                break;
+            }
+        }
+    }
+}
+
