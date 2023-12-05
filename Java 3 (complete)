@@ -5,7 +5,7 @@ demo 1
 
 import java.util.Scanner;
 
-public class Main {
+public class Demo31 {
     public static void main(String[] args) {
         int n = 26;
         int sum = 0;
@@ -14,7 +14,7 @@ public class Main {
         do {
             sum += enter;
             enter = scanner.nextInt();
-        } while (enter > n);
+        } while ((enter < n) && (enter > 0)) ;// не принимать < 0
     }
 }
 
