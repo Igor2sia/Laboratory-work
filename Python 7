@@ -44,3 +44,24 @@ def center():
     else:
         print(f'({round(x1)},{round(y1)})')
 
+
+TASK 5
+
+
+def chars_between(char1, char2):
+    start = ord(char1)
+    end = ord(char2)
+
+    if start > end:
+        char1, char2 = char2, char1
+        start, end = end, start
+
+    result = [chr(i) for i in range(start + 1, end)]
+
+    return ' '.join(result)
+
+char1 = input("Введите первый символ: ")
+char2 = input("Введите второй символ: ")
+
+result = chars_between(char1, char2)
+print(result)
