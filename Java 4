@@ -47,6 +47,72 @@ public class Main {
     }
 }
 
+
+Задача 1
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int maxPrime = Integer.MIN_VALUE;
+        int minNonPrime = Integer.MAX_VALUE;
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Введите целое число (или 'stop' для завершения): ");
+            String userInput = scanner.nextLine();
+
+            if (userInput.equalsIgnoreCase("stop")) {
+                break;
+            }
+
+            try {
+                int num = Integer.parseInt(userInput);
+
+                if (num < 0 || num == 0 || num == 1 || num == 10) {
+                    System.out.println("invalid");
+                    continue;
+                }
+
+                if (isPrime(num)) {
+                    maxPrime = Math.max(maxPrime, num);
+                } else {
+                    minNonPrime = Math.min(minNonPrime, num);
+                }
+
+            } catch (NumberFormatException e) {
+                System.out.println("invalid");
+            }
+        }
+
+        if (maxPrime != Integer.MIN_VALUE) {
+            System.out.println("prime_" + maxPrime);
+        } else {
+            System.out.println("prime_undefined");
+        }
+
+        if (minNonPrime != Integer.MAX_VALUE) {
+            System.out.println("non_prime_" + minNonPrime);
+        } else {
+            System.out.println("non_prime_undefined");
+        }
+    }
+
+    private static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+
 Задача 2
 
 import java.util.Scanner;
