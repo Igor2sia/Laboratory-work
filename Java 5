@@ -112,3 +112,40 @@ public class Main {
     }
 }
 
+TASK 2
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите строку чисел, разделенных пробелами: ");
+        String input = scanner.nextLine();
+
+        int result = maximum(input, Integer.MIN_VALUE);
+
+        System.out.println("Максимальное значение: " + result);
+    }
+
+    public static int maximum(String text, int value) {
+        if (text.isEmpty()) {
+            return value;
+        }
+
+        int startIndex = 0;
+        while (startIndex < text.length() && !Character.isDigit(text.charAt(startIndex))) {
+            startIndex++;
+        }
+
+        int endIndex = startIndex;
+        while (endIndex < text.length() && Character.isDigit(text.charAt(endIndex))) {
+            endIndex++;
+        }
+
+        String numberStr = text.substring(startIndex, endIndex);
+
+        int number = Integer.parseInt(numberStr);
+
+        return maximum(text.substring(endIndex), Math.max(value, number));
+    }
+}
