@@ -71,3 +71,44 @@ public class Main {
         }
     }
 }
+
+
+TASK 1
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = 100;
+        System.out.print("Введите координаты точки A (x1 y1): ");
+        int x1 = scanner.nextInt() * n;
+        int y1 = scanner.nextInt() * n;
+
+        System.out.print("Введите координаты точки C (x2 y2): ");
+        int x2 = scanner.nextInt() * n;
+        int y2 = scanner.nextInt() * n;
+
+        System.out.print("Введите координаты точки E (x3 y3): ");
+        int x3 = scanner.nextInt() * n;
+        int y3 = scanner.nextInt() * n;
+
+        System.out.print("Введите координаты точки J (x4 y4): ");
+        int x4 = scanner.nextInt() * n;
+        int y4 = scanner.nextInt() * n;
+
+        double result = area(x1, y1, x2, y2, x3, y3, x4, y4);
+
+        System.out.printf("Площадь ромба: %.2f\n", result);
+    }
+
+    public static double area(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
+        double diagonal1 = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        double diagonal2 = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
+        
+        double area = (diagonal1 * diagonal2) / 2;
+
+        return area;
+    }
+}
+
