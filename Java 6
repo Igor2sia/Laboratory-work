@@ -88,3 +88,26 @@ public class Main {
         }
     }
 }
+
+TASK 2
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] array1 = scanner.nextLine().split(" ");
+        String[] array2 = scanner.nextLine().split(" ");
+        // прогоняю через сет, чтобы убрать повторяющиеся элементы
+        Set<String> set1 = new HashSet<>(Arrays.asList(array1));
+        Set<String> set2 = new HashSet<>(Arrays.asList(array2));
+        set1.addAll(set2);
+        //обратно в массив
+        String[] combinedArray = set1.toArray(new String[0]);
+        //сортировка и вывод
+        Arrays.sort(combinedArray, Comparator.comparing(String::length).reversed());
+        for (String word : combinedArray) {
+            System.out.println(word);
+        }
+    }
+}
