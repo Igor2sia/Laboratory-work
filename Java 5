@@ -99,7 +99,7 @@ public class Main {
 
         double result = area(x1, y1, x2, y2, x3, y3, x4, y4);
 
-        System.out.printf("Площадь ромба: %.2f\n", result);
+        System.out.printf("Площадь ромба: %.2f", result);
     }
 
     public static double area(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
