@@ -122,21 +122,16 @@ public class Main {
         System.out.print("Введите строку чисел, разделенных пробелами: ");
         String input = scanner.nextLine();
 
-        // Вызываем рекурсивный метод для нахождения максимального значения
         int result = maximum(input, Integer.MIN_VALUE);
 
-        // Выводим результат
         System.out.println("Максимальное значение: " + result);
     }
 
-    // Рекурсивный метод для нахождения максимального значения
     public static int maximum(String text, int value) {
-        // Базовый случай: если строка пуста, возвращаем текущее максимальное значение
         if (text.isEmpty()) {
             return value;
         }
 
-        // Ищем первое целочисленное значение в строке
         int startIndex = 0;
         while (startIndex < text.length() && !Character.isDigit(text.charAt(startIndex)) && text.charAt(startIndex) != '-') {
             startIndex++;
@@ -147,13 +142,10 @@ public class Main {
             endIndex++;
         }
 
-        // Выделяем найденное число
         String numberStr = text.substring(startIndex, endIndex);
 
-        // Преобразуем его в целое число
         int number = Integer.parseInt(numberStr);
 
-        // Вызываем рекурсивно для оставшейся части строки
         return maximum(text.substring(endIndex), Math.max(value, number));
     }
 }
