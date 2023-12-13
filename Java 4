@@ -69,7 +69,7 @@ public class Main {
             try {
                 int num = Integer.parseInt(userInput);
 
-                if (num < 0 || num == 0 || num == 1) {
+                if (num <= 1) {
                     System.out.println("invalid");
                     continue;
                 }
