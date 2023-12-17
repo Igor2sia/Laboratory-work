@@ -11,7 +11,7 @@ public class Main {
         double b = scanner.nextInt();
         double N = 26;
         double answer;
-        answer = ((a - N) /(2*b))+((a * a + b * b * b) /N);
+        answer = Math.abs(((a - N) /(2*b))+((a * a + b * b * b) /N));
         System.out.println("Ответ: ");
         System.out.printf("%.2f", answer);
 
