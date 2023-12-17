@@ -47,10 +47,10 @@ public class Main {
         double discount =0.95;
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        double rezult = cost * n;
-        rezult = rezult * discount;
+        double result = cost * n;
+        result = result * discount;
         System.out.println(rezult);
-        System.out.printf("%.2f", rezult);
+        System.out.printf("%.2f", result);
         }
 }
 
