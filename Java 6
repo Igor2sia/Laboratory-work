@@ -111,3 +111,58 @@ public class Main {
         }
     }
 }
+
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class Main {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        String[] a = scanner.nextLine().split(" ");
+        String[] b = scanner.nextLine().split(" ");
+        String[] c = new String[a.length + b.length];
+        String[] d = new String[c.length];
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            c[i] = a[i];
+            count++;
+        }
+        for (int j = 0; j < b.length; j++) {
+                c[count++] = b[j];
+        }
+        boolean flag = false;
+        int countlen = 0;
+        for (int g = 0; g < c.length; g++){
+            flag = false;
+            for(int l = g + 1; l < c.length; l++){
+                if (c[g].equals(c[l])){
+                    flag = true;
+                    break;
+                }
+            }
+            if (!flag){
+                d[g] = c[g];
+                countlen++;
+            }
+        }
+        String[] end = new String[countlen];
+        int j = 0;
+        for (int i = 0; i < d.length; i++){
+            if (d[i] != null){
+                end[j] = d[i];
+                j++;
+            }
+        }
+        Arrays.sort(end);
+        System.out.println(Arrays.toString(d));
+        for (int i = end.length - 1; i >= 0; i--){
+            System.out.print(end[i]);
+            if (i != 0){
+                System.out.print(" ");
+            }
+        }
+    }
+}
