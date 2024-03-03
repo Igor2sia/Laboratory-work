@@ -11,7 +11,8 @@ public class Car{
         return make;
     }
     public void setMake(String make) {
-        this.make = make;
+        if (make != null && !make.isBlank() && make.length() > 1)
+            this.make = make;
     }
 //    model
     public String getModel() {
@@ -24,10 +25,12 @@ public class Car{
     public int getHorsePower() {
         return horsePower;
     }
-
     public void setHorsePower(int horsePower) {
-        this.horsePower = horsePower;
+        if (horsePower > 0)
+            this.horsePower = horsePower;
+        else throw new Error("Horse Power should be more than 0");
     }
+
     public Car(String make){
         this.make = make;
         this.model = "unknown";
@@ -35,10 +38,10 @@ public class Car{
     }
     public Car(String make, String model, int horsePower){
         this(make);
-        this.model = model;
-        this.horsePower = horsePower;
+        this.setModel(model);
+        this.setHorsePower(horsePower);
     }
     public String getInfo(){
-        return format("The car is: %s %s - %d HP.", make, model, horsePower);
+        return format("The car is: %s %s - %d HP.", getMake(), getModel(), getHorsePower());
     }
 }
