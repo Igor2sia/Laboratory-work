@@ -1,5 +1,5 @@
 package oop;
-
+import static java.lang.String.format;
 public class AppleTree {
     private static String sort;
     private static int age;
@@ -16,14 +16,25 @@ public class AppleTree {
         AppleTree.age = age;
         AppleTree.sort = sort;
     }
+    public void addOneYear(){
+        age++;
+    }
 
     private static int getProductivity(){
-        if (age >= 8){
-            int adulthood = Math.abs(8 - age);
-            int common = 0;
-            if (adulthood % 2 == 0){
-                common = adulthood / 2;
+        if (age < 8){
+            return 0;
             }
+        else if (age == 8) {
+            return 50;
         }
+        else {
+            int yearsAfterEight = age - 8;
+            int multiplier = yearsAfterEight / 2;
+            int harvest = (int) (50 * Math.pow(1.5, multiplier - 1));
+            return harvest;
+        }
+    }
+    public static String getInfo(){
+        return format("%s gives %d kg of Apples per year", sort, getProductivity());
     }
 }
