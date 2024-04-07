@@ -22,40 +22,41 @@ public class Bank {
 
     public static void main(String[] args) {
         int id = 0;
-        while (true) {
-            String input = scanner.nextLine().toLowerCase();
+        String input = scanner.nextLine().toLowerCase();
+        while (!input.equals("end")) {
             matcherCreate = patternCreate.matcher(input);
-            if (matcherCreate.find()) {
+            while (matcherCreate.find()) {
                 id++;
                 accounts[id] = new BankAccount();
                 System.out.printf("Account ID %d created\n", id);
+                input = scanner.nextLine().toLowerCase();
             }
             matcherAddDeposit = patternAddDeposit.matcher(input);
-            if (matcherAddDeposit.find()) {
+            while (matcherAddDeposit.find()) {
                 if (Integer.parseInt(input.split(" ")[2]) > id) {
                     System.out.printf("Account ID %s does not exist\n", input.split(" ")[2]);
                 } else {
                     accounts[Integer.parseInt(input.split(" ")[2])].deposit(Double.parseDouble(input.split(" ")[2]));
-                    System.out.printf("Deposited %s to ID %s\n", input.split(" ")[3], input.split(" ")[2]);
+                    System.out.printf("Deposited %s to ID %s\n", input.split(" ")[2], input.split(" ")[3]);
                 }
+                input = scanner.nextLine().toLowerCase();
             }
             matcherSetInterest = patternSetInterest.matcher(input);
-            if (matcherSetInterest.find()) {
+            while (matcherSetInterest.find()) {
                 BankAccount.setInterestRate(Double.parseDouble(input.split(" ")[2]));
                 System.out.println("Change Interest Rate");
-                break;
+                input = scanner.nextLine().toLowerCase();
             }
             matcherGetInterest = patternGetInterest.matcher(input);
-            if (matcherGetInterest.find()) {
+            while (matcherGetInterest.find()) {
                 if (Integer.parseInt(input.split(" ")[2]) > id) {
                     System.out.printf("Account ID %s does not exist\n", input.split(" ")[2]);
+                    input = scanner.nextLine().toLowerCase();
                 } else {
                     System.out.println(accounts[Integer.parseInt(input.split(" ")[2])].getInterest(Integer.parseInt(input.split(" ")[3])));
+                    input = scanner.nextLine().toLowerCase();
                 }
             }
-            if (input.equals("end")) break;
-
         }
-
     }
 }
