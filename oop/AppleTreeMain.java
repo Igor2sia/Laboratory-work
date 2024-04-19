@@ -9,7 +9,11 @@ public class AppleTreeMain {
         String inputSort = scanner.nextLine();
         System.out.println("Введите возраст");
         int inputAge = scanner.nextInt();
-        new AppleTree(inputSort, inputAge);
-        System.out.println(AppleTree.getInfo());
+        if (inputAge < 0){
+            System.out.println("Invalid age");
+            return;
+        }
+        AppleTree appleTree = new AppleTree(inputSort, inputAge);
+        System.out.println(appleTree.getInfo());
     }
 }
