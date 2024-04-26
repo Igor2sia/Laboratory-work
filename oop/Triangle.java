@@ -7,6 +7,12 @@ public class Triangle {
     private int sideB;
     private int sideC;
 
+    public Triangle(int sideA, int sideB, int sideC){
+        setSideA(sideA);
+        setSideB(sideB);
+        setSideC(sideC);
+    }
+
     public void setSideA(int sideA) {
         if (sideA < 0){
             sideA *= -1;
@@ -27,11 +33,7 @@ public class Triangle {
         }
         this.sideC = sideC;
     }
-    public Triangle(int sideA, int sideB, int sideC){
-        setSideA(sideA);
-        setSideB(sideB);
-        setSideC(sideC);
-    }
+
     public int getArea(){
         int semiS = (sideA + sideB + sideC)/2;
         return (int) round(Math.sqrt(semiS*(semiS-sideA)*(semiS-sideB)*(semiS-sideC)));
