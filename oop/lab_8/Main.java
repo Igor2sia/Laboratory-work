@@ -1,3 +1,5 @@
+package oop.lab_8;
+
 import java.util.Random;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,

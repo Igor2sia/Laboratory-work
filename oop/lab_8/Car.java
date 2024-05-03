@@ -1,4 +1,4 @@
-package oop;
+package oop.lab_8;
 
 import static java.lang.String.format;
 

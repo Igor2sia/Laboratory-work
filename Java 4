@@ -4,7 +4,7 @@ Demo 1
 
 import java.util.Scanner;
 
-public class Main {
+public class oop.lab_8.Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int sum = 0;
@@ -24,7 +24,7 @@ Demo 2
 
 import java.util.Scanner;
 
-public class Main {
+public class oop.lab_8.Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = 26;
@@ -52,7 +52,7 @@ public class Main {
 
 import java.util.Scanner;
 
-public class Main {
+public class oop.lab_8.Main {
     public static void main(String[] args) {
         int maxPrime = -1;
         int minNonPrime = Integer.MAX_VALUE;
@@ -105,7 +105,7 @@ public class Main {
 import java.util.Scanner;
 
 
-public class Main {
+public class oop.lab_8.Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         float cost = 0;

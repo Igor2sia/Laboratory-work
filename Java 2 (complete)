@@ -2,7 +2,7 @@ Task 1
 
 import java.util.Scanner;
 
-public class Main {
+public class oop.lab_8.Main {
     public static void main(String[] args) {
         int n = 26;
         Scanner scanner = new Scanner(System.in);
@@ -20,7 +20,7 @@ public class Main {
 Task 2
 import java.util.Scanner;
 
-public class Main {
+public class oop.lab_8.Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String day = scanner.next().toLowerCase();
@@ -40,7 +40,7 @@ Task 3
 
 import java.util.Scanner;
 
-public class Main {
+public class oop.lab_8.Main {
     public static void main(String[] args) {
         String stop;
         int n = 100;

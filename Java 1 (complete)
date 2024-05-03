@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class Main {
+public class oop.lab_8.Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введи число а");
@@ -19,7 +19,7 @@ public class Main {
 }
 import java.util.Scanner;
 
-public class Main {
+public class oop.lab_8.Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input text");
@@ -40,7 +40,7 @@ public class Main {
 }
 
 import java.util.Scanner;
-public class Main {
+public class oop.lab_8.Main {
     public static void main(String[] args) {
         int N = 26;
         double cost = 123.45 * N;
@@ -55,7 +55,7 @@ public class Main {
 }
 
 import java.util.Scanner;
-public class Main {
+public class oop.lab_8.Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         char symbol = scanner.next().charAt(0);
