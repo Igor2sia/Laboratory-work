@@ -1,4 +1,4 @@
-package oop.lab_10.task;
+package oop.lab_10.task1;
 
 public abstract class BaseVehicle implements Vehicle{
     private String model;

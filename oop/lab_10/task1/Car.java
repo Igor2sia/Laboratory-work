@@ -1,4 +1,4 @@
-package oop.lab_10.task;
+package oop.lab_10.task1;
 
 public class Car extends BaseVehicle{
     public Car(String model) {

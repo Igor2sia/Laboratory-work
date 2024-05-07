@@ -1,4 +1,4 @@
-package oop.lab_9;
+package oop.lab_9.task1;
 public class Vehicle {
     protected int passengers;
 
