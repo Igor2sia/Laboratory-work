@@ -1,5 +1,7 @@
 package oop.lab_9.task1;
 
+import oop.lab_9.task1.Vehicle;
+
 public class Boat extends Vehicle {
 
     private int oarsCount;

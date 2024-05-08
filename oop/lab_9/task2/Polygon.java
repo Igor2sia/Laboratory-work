@@ -21,7 +21,7 @@ public class Polygon {
         return x >= 1;
     }
     public static boolean isCorrectPolygon(int[] sides){
-        if (sides.length == 1) return true;
+        if (sides.length == 1) return true; //todo
         int sum = 0;
         int max = sides[0];
         for (int x : sides){

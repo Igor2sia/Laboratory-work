@@ -14,9 +14,14 @@ public class Circle extends Polygon{
     }
 
     @Override
+    public int getPerimeter() {
+        return (int) (Math.round(2 * getPerimeter() * Math.PI * 100.0) / 100.0);
+    }
+
+    @Override
     public String toString() {
         return "Circle radius is " + sides[0] +
-                "\nIts perimeter " + (double) (Math.round(2 * getPerimeter() * Math.PI * 100.0) / 100.0) +
+                "\nIts perimeter " + getPerimeter() +
                 "\nIts area is " + getArea();
     }
 }
