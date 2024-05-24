@@ -9,7 +9,7 @@ public class Student extends AbstractPerson implements IdentifiableStudent{
     }
 
     public void setStudentId(String studentId) {
-        if (studentId.isEmpty()) throw new IllegalArgumentException();
+        if (studentId == null || studentId.isEmpty()) throw new IllegalArgumentException();
         this.studentId = studentId;
     }
 

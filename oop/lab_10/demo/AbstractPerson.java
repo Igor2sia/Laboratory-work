@@ -34,7 +34,7 @@ public abstract class AbstractPerson implements Person, Birthable, Identifiable 
     }
 
     protected void setName(String name) {
-        if (name.isEmpty()) throw new IllegalArgumentException();
+        if (name == null || name.isEmpty()) throw new IllegalArgumentException();
         this.name = name;
     }
 

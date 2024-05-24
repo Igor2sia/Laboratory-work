@@ -12,6 +12,7 @@ public class MainCitizen {
         objects[2] = new Student("Ann", 20, "125", "31-20-2004", "100501");
         objects[3] = new Citizen("Tim", 84, "123", "13-01-1940");
         objects[4] = new Anonymous("31-12-2000");
+        objects[4] = new Anonymous(null);
 
         for (Object item : objects){
             if (item instanceof Person){

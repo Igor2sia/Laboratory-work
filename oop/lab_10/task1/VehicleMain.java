@@ -1,7 +1,4 @@
 package oop.lab_10.task1;
-
-
-
 public class VehicleMain {
     public static void main(String[] args) {
         Vehicle[] mock = new Vehicle[3];

@@ -14,7 +14,7 @@ public class Anonymous implements Birthable {
     }
 
     public void setBirthDate(String birthDate) {
-        if (birthDate.isEmpty()) throw new IllegalArgumentException();
+        if (birthDate == null || birthDate.isEmpty()) throw new IllegalArgumentException();
         this.birthDate = birthDate;
     }
 }
