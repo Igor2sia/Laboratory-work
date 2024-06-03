@@ -1,10 +1,12 @@
+package oop.lab_11.task;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class Task_1 {
     static String path = "resources\\example.txt";
     static String[] temp;
     static char[] arr = {'.' ,'–','(', ')'};

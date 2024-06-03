@@ -1,8 +1,10 @@
+package oop.lab_11.demo;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Task_1 {
+public class Demo_1 {
     static String path = "resources\\example.txt";
     static Scanner scanner = new Scanner(System.in);
     static String text = "";
